@@ -18,7 +18,7 @@ namespace DAL.Impl
 
         public CategoryRepository()
         {
-            _client = new MongoClient("mongodb://localhost:27017");
+            _client = new MongoClient("mongodb://tillstore:d5r4GpgWKDeJgWWhKFd9rN6V8zBRYVWmGQLB4GZMzpzfOp4zk2sK0p0YC5QZJ2yiYpSQrq0Uffxf6vMXR2ElMw==@tillstore.documents.azure.com:10250/?ssl=true");
             _server = _client.GetServer();
             _db = _server.GetDatabase("Sales");
         }

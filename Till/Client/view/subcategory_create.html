@@ -1,0 +1,15 @@
+<table border="1" cellspacing="0">
+    <tr><th colspan="2">Sub Category</th></tr>
+    <tr><td><b>Category</b></td><td><select ng-model="categoryIdSelected" ng-options="category.Id as category.Name for category in categories"></select> </td></tr>
+    <tr><td><b>name</b></td><td><input ng-model="subCategoryName" type="text" /> </td></tr>
+    <tr><td colspan="2" align="center"><input type="button" ng-click="add()" value="Add SubCategory" class="button" /></td></tr>
+</table>
+<br />
+<br />
+
+<br />
+<br />
+
+
+
+<a ui-sref="unauth.subcategories" ui-sref-active="active">Back To SubCategories</a>

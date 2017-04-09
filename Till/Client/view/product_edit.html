@@ -1,0 +1,15 @@
+<table border="1" cellspacing="0">
+    <tr><th colspan="2">Edit Product</th></tr>
+    <tr><td><b>Id</b></td><td><span>{{editProductId}}</span></td></tr>
+    <tr><td><b>CategoryId</b></td><td><select ng-model="subCategoryIdEdit" ng-options="subCategory.Id as subCategory.Name for subCategory in subCategories"></select> </td></tr>
+    <tr><td><b>name</b></td><td><input ng-model="editProductName" type="text" /> </td></tr>
+    <tr><td colspan="2" align="center"><input type="button" ng-click="update()" value="Update Product" class="button" /></td></tr>
+</table> 
+
+
+<br />
+<br />
+
+
+
+<a ui-sref="unauth.products" ui-sref-active="active">Back To Products</a>

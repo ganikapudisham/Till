@@ -1,9 +1,7 @@
-<table border="1" cellspacing="0">
-    <tr><th colspan="2">Product</th></tr>
-    <tr><td><b>Sub Category</b></td><td><select ng-model="categoryIdSelected" ng-options="subCategory.Id as subCategory.Name for subCategory in subCategories"></select> </td></tr>
-    <tr><td><b>name</b></td><td><input ng-model="Product" type="text" /> </td></tr>
-    <tr><td colspan="2" align="center"><input type="button" ng-click="add()" value="Add SubCategory" class="button" /></td></tr>
-</table>
+<br />
+<br />
+<a ui-sref=".createProduct" ui-sref-active="active" href="#/products/create">Create Product</a>
+
 
 <br />
 <br />
@@ -16,6 +14,8 @@
                 <th style="min-width: 80px;">Product Name</th>
                 <th style="width:20px;"> </th>
                 <th style="width:20px;"> </th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -25,16 +25,12 @@
                 <td>{{ product.Name }}</td>
                 <td><a ng-click="get(product.Id)" class="btn btn-small btn-primary">edit</a></td>
                 <td><a ng-click="delete(product.Id)" class="btn btn-small btn-danger">delete</a></td>
+                <td></td>
+                <td><a ui-sref=".editProduct({ Id: product.Id })" ui-sref-active="active" href="#/products/{{product.Id}}">Edit</a></td>
+
             </tr>
         </tbody>
     </table>
 </div>
 <br />
 <br />
-<table border="1" cellspacing="0">
-    <tr><th colspan="2">Edit Product</th></tr>
-    <tr><td><b>Id</b></td><td><span>{{editProductId}}</span></td></tr>
-    <tr><td><b>CategoryId</b></td><td><select ng-model="subCategoryIdEdit" ng-options="subCategory.Id as subCategory.Name for subCategory in subCategories"></select> </td></tr>
-    <tr><td><b>name</b></td><td><input ng-model="editProductName" type="text" /> </td></tr>
-    <tr><td colspan="2" align="center"><input type="button" ng-click="update()" value="Update Product" class="button" /></td></tr>
-</table> 

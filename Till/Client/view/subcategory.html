@@ -1,11 +1,7 @@
-<table border="1" cellspacing="0">
-        <tr><th colspan="2">Sub Category</th></tr>
-        <tr><td><b>Category</b></td><td><select ng-model="categoryIdSelected" ng-options="category.Id as category.Name for category in categories"></select> </td></tr> 
-        <tr><td><b>name</b></td><td><input ng-model="subCategoryName" type="text" /> </td></tr> 
-        <tr><td colspan="2" align="center"><input type="button" ng-click="add()" value="Add SubCategory" class="button" /></td></tr>
-    </table> 
 <br />
 <br />
+<a ui-sref=".createSubCategory" ui-sref-active="active" href="#/subcategories/create">Create SubCategory</a>
+
 
 <div class="span6">
     <table class="table table-striped table-condensed" border="1" style="border-color:blue">
@@ -16,6 +12,8 @@
                 <th style="min-width: 80px;">SubCategory Name</th> 
                 <th style="width:20px;"> </th>
                 <th style="width:20px;"> </th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -25,16 +23,12 @@
                 <td>{{ subCategory.Name }}</td>
                 <td><a ng-click="get(subCategory.Id)" class="btn btn-small btn-primary">edit</a></td>
                 <td><a ng-click="delete(subCategory.Id)" class="btn btn-small btn-danger">delete</a></td>
+                <td></td>
+                <td><a ui-sref=".editSubCategory({ Id: subCategory.Id })" ui-sref-active="active" href="#/subCategories/{{subCategory.Id}}">Edit</a></td>
+
             </tr>
         </tbody>
     </table>
 </div>
 <br />
 <br />
-<table border="1" cellspacing="0">
-    <tr><th colspan="2">Edit SubCategory</th></tr>
-    <tr><td><b>Id</b></td><td><span>{{editSubCatId}}</span></td></tr>
-    <tr><td><b>CategoryId</b></td><td><select ng-model="categoryIdEdit" ng-options="category.Id as category.Name for category in categories"></select> </td></tr>
-    <tr><td><b>name</b></td><td><input ng-model="editSubCatName" type="text" /> </td></tr>
-    <tr><td colspan="2" align="center"><input type="button" ng-click="update()" value="Update SubCategory" class="button" /></td></tr>
-</table> 
